@@ -3,6 +3,9 @@
     margin-left: 0px auto;
     
 } */
+h2{
+    margin-top: -9px;
+}
 
 .side-by-side{
     display: flex;
@@ -10,27 +13,40 @@
     justify-content: center;
     flex-direction: space-between;
     margin-left: 14%; 
-    width: 70%;
-    height: 130px;
+    width: 73%;
+    height: 110px;
     border: 2px solid black;
-    padding: 12px;
+    padding: 14px;
     box-shadow: 0 0 20px 0 rgba(77, 125, 173, 0.7);
     border-radius: 8px;
+}
+.font-weight-bold{
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+
 }
 
 .but{
     display: flex;
     flex-direction: column;
     width: 20%;
-    height: 20%;
+    height: 130px;
     justify-content: center;
     align-items: center;
     margin:auto;
+    /* background-color: rgb(37, 15, 28); */
+}
+form{
+    margin-bottom: 14px;
 }
 .l1{
+    border-radius: 9px ;
+    font-style: Arial;
     
     border-style: solid;
-    background-color: rgb(102, 107, 106);
+    background-color: rgb(37, 15, 28);
+
     color: rgb(240, 236, 236);
     width: 50%;
     align-items: center;
@@ -43,10 +59,12 @@
     border: 2px solid blueviolet;
 } */
 .tableasset{
-    margin-left: 100px;
+    margin-left: 122px;
     border: 1px solid black;
     color: azure;
     width: 80%;
+    margin-bottom: 7px;
+    margin-top: 6px;
 }
 .save{
     background-color: rgb(37, 15, 28);
@@ -59,7 +77,9 @@
 .backbutton{
     background-color: rgb(37, 15, 28);
     color: antiquewhite;
+    /* margin-bottom: -6px; */
 }
 .themeid{
-    border: 5px;
+    /* border: 5px solid black; */
+    margin-top: -10px;
 }

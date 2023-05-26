@@ -1,13 +1,12 @@
 .bg {
     background-image: url("https://akm-img-a-in.tosshub.com/businesstoday/images/story/202305/news-recession-stocks-rally-again-sixteen_nine_0.jpg?size=948:533");
-    /* width: 1280px;
-    height: 507px; */
+    
     background-position: center;
     background-repeat: no-repeat;  
     background-size: cover;
     background-attachment:fixed ;
-    width: 1350px;
-    height: 535px;
+    width: 1280px;
+    height: 487px;
 
   }
   /* .h1 {

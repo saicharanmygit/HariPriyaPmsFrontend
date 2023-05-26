@@ -79,43 +79,41 @@ function AddThemes() {
         <div className="container">
             {/* <Navbar /> */}
             
-            <br />
+            {/* <br /> */}
             <h2> Customize Your Theme</h2>
-            <br />
+            {/* <br /> */}
 
             <Form>
                 <div className="side-by-side">
                     <Form.Group controlId="themeName">
-                        <Form.Label className='font-weight-bold' style={{ fontSize: '25px', color: 'darkblack' }}>Theme Name</Form.Label>
+                        <Form.Label className='font-weight-bold' style={{ fontSize: '20px', color: 'darkblack' }}>Theme Name</Form.Label>
                         <Form.Control type="text"  value={themeName} onChange={(e) => setThemeName(e.target.value)} style={{ fontSize: '16px', color: 'black',border:"2px solid black" }} />
                     </Form.Group>&nbsp;&nbsp;&nbsp;
                     <br />
                     <Form.Group controlId="risk">
-                        <Form.Label className='font-weight-bold' style={{ fontSize: '25px', color: 'darkblack' }}>Risk</Form.Label>
+                        <Form.Label className='font-weight-bold' style={{ fontSize: '20px', color: 'darkblack' }}>Risk</Form.Label>
                         <Form.Control type="text" style={{border:"2px solid black"}}value={risk} onChange={(e) => setRisk(e.target.value)} />
                     </Form.Group>&nbsp;&nbsp;&nbsp;
                     <br />
                     <br />
-                    <Form.Group controlId="investmentHorizon" style={{ fontSize: '25px', color: 'darkblack' }}>
+                    <Form.Group controlId="investmentHorizon" style={{ fontSize: '20px', color: 'darkblack' }}>
                         <Form.Label className='font-weight-bold'>Investment Duration</Form.Label>
                         <Form.Control type="text" style={{border:"2px solid black"}}value={investmentHorizon} onChange={(e) => setInvestmentHorizon(e.target.value)} />
                     </Form.Group>&nbsp;&nbsp;&nbsp;
-
-                </div>
-            </Form>
-            <br></br>
-            <br></br>
             <div className="but">
                 <button className="l1" type="submit" onClick={handleSubmit} >Save</button>
             </div>
-            <br />
-            <br />
-            <h1>Add Assets to Theme</h1><br />
-            <div>
+
+                </div>
+            </Form>
+            
+            {/* <br />   */}
+            <h2>Add Assets to Theme</h2><br />
+            {/* <div> */}
                 <div className='table table-sm table-dark'>
 
                     <Form onSubmit={handleSubmits}>
-                        <label htmlFor="themeId" style={{fontSize:"20px",color:"black"}} className="themeid">Your Theme ID  :&nbsp;</label>
+                        <label htmlFor="themeid" style={{fontSize:"20px",color:"black"}} className="themeid">Your Theme ID :</label>&nbsp;
                         <input
                             type="text"
                             id="themeId"
@@ -177,7 +175,7 @@ function AddThemes() {
                         </button>
                     </Form>
                 </div>
-            </div>
+            {/* </div> */}
             {/* <Footer /> */}
         </div>
     );

@@ -143,7 +143,7 @@ function LandingPage() {
 
           <div className="add">
             <button
-              className="btn btn-info"
+              className="btn btn-info create"
               onClick={() => navigate("/portheader")}
             >
               Create portfolio

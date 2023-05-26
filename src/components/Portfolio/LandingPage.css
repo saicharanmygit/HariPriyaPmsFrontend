@@ -1,11 +1,11 @@
 .my-table {
   border-collapse: collapse;
 
-  margin-top: -20px;
+  /* margin-top: -2%; */
 
-  width: 100%;
+  width: 1100px;
 
-  margin-left: -5%;
+  margin-left: -1%;
   align-content: center;
 }
 
@@ -29,9 +29,12 @@
 
   font-weight: bold;
 }
+.create{
+  margin-left: 13%;
+}
 
 .my-table {
-  margin-top: -10%;
+  margin-top: -14%;
 }
 
 .tabs {
@@ -75,6 +78,7 @@
   margin-top: -19%;
 
   margin-left: 83%;
+  color:blueviolet;
 }
 
 /* .btn{

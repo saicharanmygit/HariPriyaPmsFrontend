@@ -16,12 +16,14 @@ table {
 
 
 .l1{
+    
     border-style: solid;
     background-color: rgb(102, 107, 106);
     color: rgb(240, 236, 236);
-    width: 20%;
-    height: 30%;
-    margin-top: -10%;
+    width: 5%;
+    align-items: center;
+    height: 30%; 
+    margin-top: 1%;
     margin-right: 5%;
 }
 .submit{
@@ -56,10 +58,7 @@ tr:hover{
     cursor: pointer;
 }
 .t-gap{
- margin-top: 0px;
+ margin-top: -10px;
 }
 
-/* .tab{
-    margin-left: 10%;
-    margin-top:5%;
-} */
+

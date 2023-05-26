@@ -6,6 +6,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom'
 import { useLocation } from "react-router-dom";
 import { Table } from 'react-bootstrap';
+import "./AddThemes.css";
 
 
 function AddThemes() {
@@ -27,7 +28,7 @@ function AddThemes() {
             const savedThemeId = response.data.themeId;
             // setThemeId(response.data.themeId);
             // Display themeId in pop-up
-            alert(`Your themeId is: ${savedThemeId}`);
+            alert(`Your theme is created with id : ${savedThemeId}`);
             // navigate(`/AddAssetsPage?themeId=${savedThemeId}`);
         } catch (error) {
             console.error(error);
@@ -55,7 +56,7 @@ function AddThemes() {
                 theme: { themeId: parseInt(themeId) },
             };
             await axios.post(`http://localhost:8081/Asset/addAsset`, data);
-            alert('Asset saved successfully!');
+            alert('Asset added!');
         } catch (error) {
             console.error(error);
             alert('Asset Allocation Reach 100% You cant add more assests!');
@@ -77,30 +78,36 @@ function AddThemes() {
 
         <div className="container">
             {/* <Navbar /> */}
+            
             <br />
+            <h2> Customize Your Theme</h2>
             <br />
-            <h1> Customize Your Theme</h1>
-            <br />
-            <br />
-            <Form onSubmit={handleSubmit}>
-                <Form.Group controlId="themeName">
-                    <Form.Label className='font-weight-bold' style={{ fontSize: '30px', color: 'darkblack' }}>Theme Name</Form.Label>
-                    <Form.Control type="text" value={themeName} onChange={(e) => setThemeName(e.target.value)} style={{ fontSize: '16px', color: 'black' }} />
-                </Form.Group>
-                <br />
-                <Form.Group controlId="risk">
-                    <Form.Label className='font-weight-bold'>Risk</Form.Label>
-                    <Form.Control type="text" value={risk} onChange={(e) => setRisk(e.target.value)} />
-                </Form.Group>
-                <br />
-                <br />
-                <Form.Group controlId="investmentHorizon">
-                    <Form.Label className='font-weight-bold'>Investment Duration</Form.Label>
-                    <Form.Control type="text" value={investmentHorizon} onChange={(e) => setInvestmentHorizon(e.target.value)} />
-                </Form.Group>
 
-                <Button className='btn btn-info' type="submit"> Save</Button>
+            <Form>
+                <div className="side-by-side">
+                    <Form.Group controlId="themeName">
+                        <Form.Label className='font-weight-bold' style={{ fontSize: '25px', color: 'darkblack' }}>Theme Name</Form.Label>
+                        <Form.Control type="text"  value={themeName} onChange={(e) => setThemeName(e.target.value)} style={{ fontSize: '16px', color: 'black',border:"2px solid black" }} />
+                    </Form.Group>&nbsp;&nbsp;&nbsp;
+                    <br />
+                    <Form.Group controlId="risk">
+                        <Form.Label className='font-weight-bold' style={{ fontSize: '25px', color: 'darkblack' }}>Risk</Form.Label>
+                        <Form.Control type="text" style={{border:"2px solid black"}}value={risk} onChange={(e) => setRisk(e.target.value)} />
+                    </Form.Group>&nbsp;&nbsp;&nbsp;
+                    <br />
+                    <br />
+                    <Form.Group controlId="investmentHorizon" style={{ fontSize: '25px', color: 'darkblack' }}>
+                        <Form.Label className='font-weight-bold'>Investment Duration</Form.Label>
+                        <Form.Control type="text" style={{border:"2px solid black"}}value={investmentHorizon} onChange={(e) => setInvestmentHorizon(e.target.value)} />
+                    </Form.Group>&nbsp;&nbsp;&nbsp;
+
+                </div>
             </Form>
+            <br></br>
+            <br></br>
+            <div className="but">
+                <button className="l1" type="submit" onClick={handleSubmit} >Save</button>
+            </div>
             <br />
             <br />
             <h1>Add Assets to Theme</h1><br />
@@ -108,7 +115,7 @@ function AddThemes() {
                 <div className='table table-sm table-dark'>
 
                     <Form onSubmit={handleSubmits}>
-                        <label htmlFor="themeId">Your ThemeID</label>
+                        <label htmlFor="themeId" style={{fontSize:"20px",color:"black"}} className="themeid">Your Theme ID  :&nbsp;</label>
                         <input
                             type="text"
                             id="themeId"
@@ -116,10 +123,10 @@ function AddThemes() {
                             value={themeId}
                             onChange={(e) => setThemeId(e.target.value)}
                         />
-                        <Table striped bordered hover>
+                        <Table striped bordered hover className='tableasset'>
                             <thead className="thead-dark">
                                 <tr className="table table-sm table-dark">
-                                    <th>Theme ID</th>
+                                    {/* <th>Theme ID</th> */}
                                     <th>Asset Name</th>
                                     <th>Allocation Percentage</th>
                                     <th>Actions</th>
@@ -128,7 +135,7 @@ function AddThemes() {
                             <tbody>
                                 {assets.map((asset, index) => (
                                     <tr key={index}>
-                                        <td className="font-weight-bold text-dark" ><Form />{themeId}</td>
+                                        {/* <td className="font-weight-bold text-dark" ><Form />{themeId}</td> */}
                                         <td>
                                             <Form.Control
                                                 type="text"
@@ -146,19 +153,26 @@ function AddThemes() {
                                             />
                                         </td>
                                         <td>
+                                            <Button className='btn btn-info save' onClick={() => handleSaveAsset(asset)}>Save</Button>&nbsp;
                                             {index === assets.length - 1 && (
-                                                <Button className='btn btn-info' onClick={handleAddRow}> Add Row</Button>
-                                            )}&nbsp;
-                                            <Button className='btn btn-info' onClick={() => handleDeleteRow(index)}>Delete</Button> &nbsp;
-                                            <Button className='btn btn-info' onClick={() => handleSaveAsset(asset)}>Save</Button> &nbsp;
+                                                <Button className='btn btn-info addbutton' onClick={handleAddRow}> Add </Button>
+                                            )}
+                                            {/* <Button className='btn btn-info' onClick={() => handleDeleteRow(index)}>Delete</Button> &nbsp; */}
                                         </td>
                                     </tr>
                                 ))}
                             </tbody>
                         </Table>
+                        
                         {/* <Button type="submit" className='btn btn-info'>Save Assets</Button> */}
-                        <button
+                        {/* <button
                             className="my-button" type="submit" onClick={navigate("/landingpage")}>
+                            Go Back
+                        </button> */}
+                        <button
+                            className="btn btn-info backbutton"
+                            onClick={() => navigate("/landingpage")}
+                        >
                             Go Back
                         </button>
                     </Form>

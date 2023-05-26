@@ -2,6 +2,7 @@
   /* background-color: rgb(143, 136, 185); */
   background-color: #5F264A;
   color:aliceblue;
+  
 }
 
 .home {
@@ -19,7 +20,13 @@
 
 .nav-link {
   margin-left: 0.2%;
-  
+  color:aliceblue;
+}
+
+.themeNav{
+  margin-left: 45%;
+  margin-top: 5px;
+  color:aliceblue;
 }
 
 

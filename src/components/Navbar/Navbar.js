@@ -29,9 +29,11 @@ const Navbar = () => {
         <a class="nav-link" href="#">
           <h1>Portfolio Manager &nbsp;&nbsp;&nbsp;&nbsp;</h1>
         </a>
-        <a class="nav-link" href="/addtheme">
-          <h1>theme Manager</h1>
+        <div className="themeNav">
+        <a className="nav-link" href="/addtheme">
+          <h2>Theme</h2>
         </a>
+        </div>
         {/* <h4 className="alloc">
           <a className="nav-link-alloc" href="/themeallocation">Create theme
           </a><br/>

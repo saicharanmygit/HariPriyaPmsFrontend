@@ -9,8 +9,8 @@ const HomePage = () => {
         <br></br>
         <div className="cont">
           <a href="/landingpage"><h6 className="content">
-            Welcome to 
-            <br></br>Portfolio...
+            Explore
+            <br></br>Portfolio
           </h6></a>
         </div>
       </div>

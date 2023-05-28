@@ -3,8 +3,19 @@
     margin-left: 0px auto;
     
 } */
+select option{
+    background-color: aquamarine;
+    color: #333;
+    border-radius: 5%;
+}
+select .investmenthorizon{
+    height: 10px;
+}
+select{
+    width: 180px;
+}
 h2{
-    margin-top: -9px;
+    margin-top: 3px;
 }
 
 .side-by-side{
@@ -13,7 +24,7 @@ h2{
     justify-content: center;
     flex-direction: space-between;
     margin-left: 14%; 
-    width: 73%;
+    width: 72%;
     height: 110px;
     border: 2px solid black;
     padding: 14px;
@@ -61,10 +72,13 @@ form{
 .tableasset{
     margin-left: 122px;
     border: 1px solid black;
-    color: azure;
+    color: rgb(149, 236, 236);
     width: 80%;
     margin-bottom: 7px;
     margin-top: 6px;
+}
+.assettable{
+
 }
 .save{
     background-color: rgb(37, 15, 28);

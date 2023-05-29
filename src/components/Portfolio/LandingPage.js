@@ -1,6 +1,6 @@
 import React from "react";
 import "./LandingPage.css";
-import Navbar from "../Navbar/Navbar";
+// import Navbar from "../Navbar/Navbar";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import HeaderService from "../../services/HeaderService";

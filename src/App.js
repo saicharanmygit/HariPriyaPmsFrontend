@@ -8,11 +8,13 @@ import PortHeader from "./components/Portfolio/PortHeader";
 import Footer from "./components/Navbar/Footer";
 import AddThemes from "./components/Portfolio/AddThemes";
 import HomePage from "./components/Navbar/HomePage";
-import Navbar from "./components/Navbar/Navbar";
+import ChatNav from "./components/Navbar/ChatNav";
+// import Navbar from "./components/Navbar/Navbar";
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar /> */}
+      <ChatNav/>
       <Routes>
         <Route exact path="/" element={<HomePage />}></Route>
      

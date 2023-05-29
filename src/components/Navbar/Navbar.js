@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 
+
+
+
+
+//without drop down
 const Navbar = () => {
   const[isOpen,setIsOpen]= useState(false);
 
@@ -12,7 +17,7 @@ const Navbar = () => {
   return (
     <nav className="color">
       <nav class="navbar navbar-expand-sm ">
-        {/* <a class="navbar-brand" href="/LandingPage"> */}
+        <a class="navbar-brand" href="/LandingPage"/>
         <button className="home">
           <svg
             onClick={() => navigate("/")}
@@ -29,18 +34,8 @@ const Navbar = () => {
         <a class="nav-link" href="#">
           <h1>Portfolio Manager &nbsp;&nbsp;&nbsp;&nbsp;</h1>
         </a>
-        <div className="themeNav">
-        <a className="nav-link" href="/addtheme">
-          <h2>Theme</h2>
-        </a>
-        </div>
-        {/* <h4 className="alloc">
-          <a className="nav-link-alloc" href="/themeallocation">Create theme
-          </a><br/>
-          <a className="nav-link-alloc" href="/viewtheme">View Theme</a>
-          
-        </h4> */}
-        {/* <li>
+       
+        <li>
           <a onClick={toggleDropDown} className='dropOption_Admin'>Admin <span class="caret"></span></a>
           {isOpen&&(
             <ul className="dropOption_value">
@@ -48,7 +43,7 @@ const Navbar = () => {
               <a href="/viewtheme">View Theme</a>
             </ul>
           )}
-        </li> */}
+        </li>
         
         
       </nav>
@@ -57,7 +52,7 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
+// without dropdown ends here
 
 
 

@@ -1,0 +1,8 @@
+.drop-menu-left{
+    right: auto;
+    left: 0;
+}
+.custom-dropdown .dropdown-item :hover{
+    background-color: greenyellow;
+    color: whitesmoke;
+}
